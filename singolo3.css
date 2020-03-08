@@ -1,0 +1,144 @@
+body {
+	font-family: 'Lato', sans-serif;
+	width: 1020px;
+	margin: 0 auto;
+	padding: 0;
+}
+ul {
+	padding: 0;
+}
+.main {
+	padding: 34px 0 0px;
+	color: #f0d8d9;
+	background-color: #f06c64;
+	border-bottom: 6px solid #ea676b;
+}
+.container {
+	padding: 0 40px;
+}
+.main_title {
+	font-size: 30px;
+	font-weight: 900;
+    margin-bottom: 0;
+}
+.main_text {
+	font-size: 18px;
+	font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 44px;
+}
+.main_wrap {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+}
+.form_wrap {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+form input {
+	background-color: #d6564f;
+	border:0px;
+	border-radius: 5px;
+	width: 605px;
+	height: 36px;
+	align-items: center;
+	margin-bottom: 16px;
+	padding-left: 15px;
+}
+input::placeholder { 
+  color: #f48c8f;
+  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+}
+.form_submit {
+	width: 130px;
+    padding: 0;
+    background-color: #982923;
+    color: #f0d8d9;
+    transition: 0.5s ease all;
+    cursor: pointer;
+    margin-bottom: 14px;
+}
+.form_submit:hover {
+    background-color: #d6564f;
+}
+.input_message {
+	padding: 0 0 167px 15px;
+}
+.info_title {
+	font-size: 18px;
+	font-weight: 900;
+    margin-top: -2px;
+}
+.info_text {
+	font-size: 12px;
+    font-weight: 300;
+    line-height: 22px;
+    margin-top: -8px;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+.contacts_holder {
+	width: 300px;
+}
+.contacts_wrap {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
+}
+.contacts_wrap img {
+	position: absolute;
+	font-weight: 400;
+	width: auto;
+	top: 2px;
+}
+.contacts_text {
+	margin: 0px 0px 6px 23px;
+    font-size: 12px;
+    font-weight: 400;
+}
+.footer {
+	padding: 20px 0;
+	background-color: #2d303a;
+	color: #666d89;
+
+}
+.footer_content {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.footer_text {
+	font-size: 12px;
+	font-weight: 400;
+}
+.social_wrap img {
+	margin-left: 5px;
+}
+.social_wrap img:hover {
+	cursor: pointer;
+}

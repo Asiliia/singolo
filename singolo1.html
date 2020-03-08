@@ -2,110 +2,93 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="singolo1.css">
-  <title>Singolo</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title></title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900&display=swap" rel="stylesheet">
+  <link href="singolo1.css" rel="stylesheet">
+
 </head>
 
 <body>
-  <header class="header">
-    <div class="wrapper header__collection">
-      <div class="header__logo">    
-            <a class="logo" href="#">
-            <span class="logo__text">singolo<span class="logo__text_colored">*</span></span>
-            </a>
-        </div>
-        <div class="header__navigation">
-          <ul class="navigation">
-            <li class="navigation__item"><a class="navigation__link navigation__link_selected" href="#">Home</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="#">Services</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="#">Portfolio</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="#">About</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="#">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      </div>
-    
-  </header>
-  <div class="header__bottom"></div>
+<header class="header">
+	<div class="container">
+		<nav class="nav">
+			<div class="header_logo">SINGOLO<span class="red_star">*</span></div>
+			<ul class="menu">
+				<li class="menu_item">HOME</li>
+				<li class="menu_item">SERVICES</li>
+				<li class="menu_item">PORTFOLIO</li>
+				<li class="menu_item">ABOUT</li>
+				<li class="menu_item">CONTACT</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<section class="main">
+	<div class="container">
+		<div class="slides_wrap">
+			<div class="image_wrap">
+				<img src="./assets/images/features/iPhone Vertical.png" alt="">
+				<img src="./assets/images/features/iPhone Horizontal.png" alt="">
+			</div>
+			<a href="#"><img src="./assets/images/features/left.png" alt="" class="slides_button-left"></a>
+			<a href="#"><img src="./assets/images/features/right.png" alt="" class="slides_button-right"></a>
+		</div>
+	</div>
+</section>
+<section class="info">
+	<div class="container">
+		<h1 class="info_title">Our Services</h1>
+		<p class="info_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+		<ul class="info_list">
+			<li class="info_item">
+				<img src="./assets/images/features/1.png" alt="">
+				<div class="list_item-wrap">
+					<h3 class="list_item-title">Custom Design</h3>
+					<p class="list_item-text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+				</div>
+			</li>
+			<li class="info_item">
+				<img src="./assets/images/features/2.png" alt="">
+				<div class="list_item-wrap">
+					<h3 class="list_item-title">Inovative Ideas</h3>
+					<p class="list_item-text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+				</div>
+			</li>
+			<li class="info_item">
+				<img src="./assets/images/features/3.png" alt="">
+				<div class="list_item-wrap">
+					<h3 class="list_item-title">Love Is The Answer</h3>
+					<p class="list_item-text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+				</div>
+			</li>
+			<li class="info_item">
+				<img src="./assets/images/features/4.png" alt="">
+				<div class="list_item-wrap">
+					<h3 class="list_item-title">Responsive Layout</h3>
+					<p class="list_item-text">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Prae- sent elitleo</p>
+				</div>
+			</li>
+			<li class="info_item">
+				<img src="./assets/images/features/5.png" alt="">
+				<div class="list_item-wrap">
+					<h3 class="list_item-title">24 / 7 Support</h3>
+					<p class="list_item-text">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellen- tesque egestas venenatis lorem</p>
+				</div>
+			</li>
+			<li class="info_item">
+				<img src="./assets/images/features/6.png" alt="">
+				<div class="list_item-wrap">
+					<h3 class="list_item-title">Feel Like A Star</h3>
+					<p class="list_item-text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
 
-  <div class="promo">
-    <div class="wrapper">
-      <div class="slider">
-        <img class="arrow" src="./assets/images/slider/arr_left.png" alt="left-arrow">
-        <div class="phones">
-          <img class="phone_hor" src="./assets/images/slider/phone_vert.png" alt="phone vertical">
-          <img class="phone_vert" src="./assets/images/slider/phone_hor.png" alt="phone horizontal">
-        </div>
-        <img class="arrow" src="./assets/images/slider/arr_right.png" alt="right-arrow">
-      </div>
-    </div>
-  </div>
-  <div class="promo__bottom"></div>
-
-  <section class="features">
-    <div class="services">
-      <div class="wrapper">
-        <h2 class="title">Our Services</h2>
-        <p class="description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
-          non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus
-          commodo, tortor mauris condimentum nibh.</p>
-        <div class="layout-3-column">
-          <article class="service">
-            <img class="service__icon" src="./assets/images/features/pen.png" alt="pen">
-            <div class="service__content">
-              <h3 class="service__name">Custom Design</h3>
-              <p class="service__description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet,
-                vivverra lacus ut, ultrices velit.</p>
-            </div>
-          </article>
-          <article class="service">
-            <img class="service__icon" src="./assets/images/features/bulb.png" alt="bulb">
-            <div class="service__content">
-              <h3 class="service__name">Innovative Ideas</h3>
-              <p class="service__description">Quisque luctus, quam eget molestie com-modo, lacus purus curus purus, nec
-                rutrum tellus dolor id lorem.</p>
-            </div>
-          </article>
-          <article class="service">
-            <img class="service__icon" src="./assets/images/features/heart.png" alt="heart">
-            <div class="service__content">
-              <h3 class="service__name">Love Is The Answer</h3>
-              <p class="service__description">Nulla sed nunc et toror luctus faucibus. Morbi at aliquet turpis, et
-                consequat felis. Quisque condimentum.</p>
-            </div>
-          </article>
-          <article class="service">
-            <img class="service__icon" src="./assets/images/features/phone.png" alt="phone">
-            <div class="service__content">
-              <h3 class="service__name">Responsive Layout</h3>
-              <p class="service__description">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc
-                ligula. Praesent elit leo.</p>
-            </div>
-          </article>
-          <article class="service">
-            <img class="service__icon" src="./assets/images/features/bubble.png" alt="bubble">
-            <div class="service__content">
-              <h3 class="service__name">24/7 Support</h3>
-              <p class="service__description">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem
-                erat. Pellentesque egestas venenatis lorem.</p>
-            </div>
-          </article>
-          <article class="service">
-            <img class="service__icon" src="./assets/images/features/star.png" alt="star">
-            <div class="service__content">
-              <h3 class="service__name">Feel Like A Star</h3>
-              <p class="service__description">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce
-                vitae aliquam tellus.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-    <div class="services__bottom"></div>
-  </section>
 </body>
 
 </html>

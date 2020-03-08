@@ -180,6 +180,9 @@ body {
 	display: block;
 	margin-top: 20px;
 }
+.images__wrap img:nth-child(n+13) {
+    display: none;
+  }
 .settings {
 	list-style: none;
 	display: -webkit-flex;

@@ -328,7 +328,6 @@ input::placeholder {
 .form_submit {
 	width: 130px;
     padding: 0;
-    margin: 10px 0 0 0;
     background-color: #982923;
     color: #f0d8d9;
     transition: 0.5s ease all;

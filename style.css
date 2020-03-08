@@ -82,7 +82,7 @@ body {
 	transition: 0.5s all ease;
 }
 .slides_button-right:hover, .slides_button-left:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 .info {
 	padding: 60px 0 41px;
@@ -256,6 +256,9 @@ body {
 	font-weight: 900;
     margin-top: 12px;
     margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .card_text {
 	font-size: 12px;

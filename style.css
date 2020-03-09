@@ -363,6 +363,10 @@ input::placeholder {
 .contacts__holder {
 	width: 300px;
 }
+a { 
+	color: #f0d8d9;
+    text-decoration: none;
+}
 .contacts__wrap {
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -386,8 +390,9 @@ input::placeholder {
 .contacts__text {
 	margin: 0px 0px 6px 23px;
     font-size: 12px;
-    font-weight: 400;
+	font-weight: 400;
 }
+
 .footer {
 	padding: 20px 0;
 	background-color: #2d303a;

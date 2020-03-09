@@ -31,7 +31,7 @@ body {
     align-items: center;
     text-transform: uppercase;
 }
-.menu {
+.navigation {
     list-style: none;
     display: -webkit-flex;
     display: -moz-flex;
@@ -42,11 +42,11 @@ body {
 	padding: 0;
 	margin: 0;
 }
-.menu__item {
+.navigation__item {
     padding-top: 8px;
     margin-left: 29px;
 }
-.menu__item:hover {
+.navigation__item:hover {
 	color: #f06c64;
 }
 .main {
@@ -389,7 +389,7 @@ a {
 	position: absolute;
 	font-weight: 400;
 	width: auto;
-	top: 2px;
+	top: 4px;
 }
 .contacts__text {
 	margin: 0px 0px 6px 23px;

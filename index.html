@@ -2,87 +2,88 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title></title>
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singolo</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
 <header class="header">
 	<div class="container">
 		<nav class="nav">
-			<div class="header_logo">SINGOLO<span class="red_star">*</span></div>
-			<ul class="menu">
-				<li class="menu_item">HOME</li>
-				<li class="menu_item">SERVICES</li>
-				<li class="menu_item">PORTFOLIO</li>
-				<li class="menu_item">ABOUT</li>
-				<li class="menu_item">CONTACT</li>
+			<a class="header__logo" href="#">
+        <span class="logo__text">singolo</span>
+      </a>
+			<ul class="navigation">
+				<li><a class="navigation__item navigation__link_selected" href="#">home</a></li>
+				<li><a class="navigation__item" href="#">services</a></li>
+				<li><a class="navigation__item" href="#">portfolio</a></li>
+				<li><a class="navigation__item" href="#">about</a></li>
+				<li><a class="navigation__item" href="#">contact</a></li>
 			</ul>
 		</nav>
 	</div>
 </header>
 <section class="main">
 	<div class="container">
-		<div class="slides_wrap">
-			<div class="image_wrap">
-				<img src="./assets/images/features/iPhone Vertical.png" alt="">
-				<img src="./assets/images/features/iPhone Horizontal.png" alt="">
+		<div class="slides__wrap">
+			<div class="image__wrap">
+				<img src="./assets/images/features/iPhone Vertical.png" alt="phonevert">
+				<img src="./assets/images/features/iPhone Horizontal.png" alt="phonehor">
 			</div>
-			<a href="#"><img src="./assets/images/features/left.png" alt="" class="slides_button-left"></a>
-			<a href="#"><img src="./assets/images/features/right.png" alt="" class="slides_button-right"></a>
+			<a href="#"><img src="./assets/images/features/left.png" alt="left" class="slides__button-left"></a>
+			<a href="#"><img src="./assets/images/features/right.png" alt="right" class="slides__button-right"></a>
 		</div>
 	</div>
 </section>
 <section class="info">
 	<div class="container">
-		<h1 class="info_title">Our Services</h1>
-		<p class="info_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-		<ul class="info_list">
-			<li class="info_item">
-				<img src="./assets/images/features/1.png" alt="">
-				<div class="list_item-wrap">
-					<h3 class="list_item-title">Custom Design</h3>
-					<p class="list_item-text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+		<h1 class="info__title">Our Services</h1>
+		<p class="info__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+		<ul class="info__list">
+			<li class="info__item">
+				<img src="./assets/images/features/1.png" alt="feat1">
+				<div class="list__item-wrap">
+					<h3 class="list__item-title">Custom Design</h3>
+					<p class="list__item-text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
 				</div>
 			</li>
-			<li class="info_item">
-				<img src="./assets/images/features/2.png" alt="">
-				<div class="list_item-wrap">
-					<h3 class="list_item-title">Inovative Ideas</h3>
-					<p class="list_item-text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+			<li class="info__item">
+				<img src="./assets/images/features/2.png" alt="feat2">
+				<div class="list__item-wrap">
+					<h3 class="list__item-title">Inovative Ideas</h3>
+					<p class="list__item-text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
 				</div>
 			</li>
-			<li class="info_item">
-				<img src="./assets/images/features/3.png" alt="">
-				<div class="list_item-wrap">
-					<h3 class="list_item-title">Love Is The Answer</h3>
-					<p class="list_item-text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+			<li class="info__item">
+				<img src="./assets/images/features/3.png" alt="feat3">
+				<div class="list__item-wrap">
+					<h3 class="list__item-title">Love Is The Answer</h3>
+					<p class="list__item-text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
 				</div>
 			</li>
-			<li class="info_item">
-				<img src="./assets/images/features/4.png" alt="">
-				<div class="list_item-wrap">
-					<h3 class="list_item-title">Responsive Layout</h3>
-					<p class="list_item-text">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Prae- sent elitleo</p>
+			<li class="info__item">
+				<img src="./assets/images/features/4.png" alt="feat4">
+				<div class="list__item-wrap">
+					<h3 class="list__item-title">Responsive Layout</h3>
+					<p class="list__item-text">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Prae- sent elitleo</p>
 				</div>
 			</li>
-			<li class="info_item">
-				<img src="./assets/images/features/5.png" alt="">
-				<div class="list_item-wrap">
-					<h3 class="list_item-title">24 / 7 Support</h3>
-					<p class="list_item-text">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellen- tesque egestas venenatis lorem</p>
+			<li class="info__item">
+				<img src="./assets/images/features/5.png" alt="feat5">
+				<div class="list__item-wrap">
+					<h3 class="list__item-title">24 / 7 Support</h3>
+					<p class="list__item-text">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellen- tesque egestas venenatis lorem</p>
 				</div>
 			</li>
-			<li class="info_item">
-				<img src="./assets/images/features/6.png" alt="">
-				<div class="list_item-wrap">
-					<h3 class="list_item-title">Feel Like A Star</h3>
-					<p class="list_item-text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
+			<li class="info__item">
+				<img src="./assets/images/features/6.png" alt="feat6">
+				<div class="list__item-wrap">
+					<h3 class="list__item-title">Feel Like A Star</h3>
+					<p class="list__item-text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
 				</div>
 			</li>
 		</ul>
@@ -90,103 +91,102 @@
 </section>
 <section class="portfolio">
     <div class="container">
-      <h2 class="portfolio_title">Portfolio</h2>
-      <p class="portfolio_text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget laciniaodio sem nec elit.</p>
+      <h2 class="portfolio__title">Portfolio</h2>
+      <p class="portfolio__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget laciniaodio sem nec elit.</p>
       <ul class="settings">
-        <li class="settings_item">All</li>
-        <li class="settings_item">Web Design</li>
-        <li class="settings_item">Graphic Design</li>
-        <li class="settings_item">Artwork</li>
+        <li class="settings__item active">All</li>
+        <li class="settings__item">Web Design</li>
+        <li class="settings__item">Graphic Design</li>
+        <li class="settings__item">Artwork</li>
       </ul>
-      <div class="images_wrap">
-        <img src="./assets/images/portfolio/1.png" alt="1">
-        <img src="./assets/images/portfolio/2.png" alt="2">
-        <img src="./assets/images/portfolio/3.png" alt="3">
-        <img src="./assets/images/portfolio/4.png" alt="4">
-        <img src="./assets/images/portfolio/5.png" alt="5">
-        <img src="./assets/images/portfolio/6.png" alt="6">
-        <img src="./assets/images/portfolio/7.png" alt="7">
-        <img src="./assets/images/portfolio/8.png" alt="8">
-        <img src="./assets/images/portfolio/9.png" alt="9">
-        <img src="./assets/images/portfolio/10.png" alt="10">
-        <img src="./assets/images/portfolio/11.png" alt="11">
-        <img src="./assets/images/portfolio/12.png" alt="12">
+      <div class="images__wrap">
+        <img src="./assets/images/portfolio/1.png" alt="port1">
+        <img src="./assets/images/portfolio/2.png" alt="port2">
+        <img src="./assets/images/portfolio/3.png" alt="port3">
+        <img src="./assets/images/portfolio/4.png" alt="port4">
+        <img src="./assets/images/portfolio/5.png" alt="port5">
+        <img src="./assets/images/portfolio/6.png" alt="port6">
+        <img src="./assets/images/portfolio/7.png" alt="port7">
+        <img src="./assets/images/portfolio/8.png" alt="port8">
+        <img src="./assets/images/portfolio/9.png" alt="port9">
+        <img src="./assets/images/portfolio/10.png" alt="port10">
+        <img src="./assets/images/portfolio/11.png" alt="port11">
+        <img src="./assets/images/portfolio/12.png" alt="port12">
       </div>
     </div>
   </section>
   <section class="about">
     <div class="container">
-      <h2 class="about_title">About Us</h2>
-      <p class="about_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-      <div class="photo_wrap">
+      <h2 class="about__title">About Us</h2>
+      <p class="about__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+      <div class="photo__wrap">
         <div class="card">
-          <img src="./assets/images/portfolio/photo-2.png" alt="" class="card_img">
-          <h3 class="card_title">Adam Jensen</h3>
-          <p class="card_text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem</p>
+          <img src="./assets/images/portfolio/photo-2.png" alt="photo2" class="card_img">
+          <h3 class="card__title">Adam Jensen</h3>
+          <p class="card__text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem</p>
           <div class="social">
-            <img src="./assets/images/portfolio/facebook.png" alt="" class="social_image">
-            <img src="./assets/images/portfolio/google.png" alt="" class="social_image">
-            <img src="./assets/images/portfolio/twitter.png" alt="" class="social_image">
-            <img src="./assets/images/portfolio/linkedin.png" alt="" class="social_image">
+            <img src="./assets/images/portfolio/facebook.png" alt="facebook" class="social_image">
+            <img src="./assets/images/portfolio/google.png" alt="google" class="social_image">
+            <img src="./assets/images/portfolio/twitter.png" alt="twitter" class="social_image">
+            <img src="./assets/images/portfolio/linkedin.png" alt="linkedin" class="social_image">
           </div>
         </div>
         <div class="card">
-          <img src="./assets/images/portfolio/photo-1.png" alt="" class="card_img">
-          <h3 class="card_title">Desmond Miles</h3>
-          <p class="card_text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+          <img src="./assets/images/portfolio/photo-1.png" alt="photo1" class="card_img">
+          <h3 class="card__title">Desmond Miles</h3>
+          <p class="card__text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
           <div class="social">
-            <img src="./assets/images/portfolio/facebook.png" alt="" class="social_image">
-            <img src="./assets/images/portfolio/google.png" alt="" class="social_image">
-            <img src="./assets/images/portfolio/twitter.png" alt="" class="social_image">
-            <img src="./assets/images/portfolio/linkedin.png" alt="" class="social_image">
+            <img src="./assets/images/portfolio/facebook.png" alt="facebook" class="social_image">
+            <img src="./assets/images/portfolio/google.png" alt="google" class="social_image">
+            <img src="./assets/images/portfolio/twitter.png" alt="twitter" class="social_image">
+            <img src="./assets/images/portfolio/linkedin.png" alt="linkedin" class="social_image">
           </div>
         </div>
         <div class="card">
-          <img src="./assets/images/portfolio/photo.png" alt="" class="card_img">
-          <h3 class="card_title">Scolara Visari</h3>
-          <p class="card_text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+          <img src="./assets/images/portfolio/photo.png" alt="photo0" class="card_img">
+          <h3 class="card__title">Scolara Visari</h3>
+          <p class="card__text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
           <div class="social">
-            <img src="./assets/images/portfolio/facebook.png" alt="" class="social_image">
-            <img src="./assets/images/portfolio/google.png" alt="" class="social_image">
-            <img src="./assets/images/portfolio/twitter.png" alt="" class="social_image">
-            <img src="./assets/images/portfolio/linkedin.png" alt="" class="social_image">
+            <img src="./assets/images/portfolio/facebook.png" alt="facebook" class="social_image">
+            <img src="./assets/images/portfolio/google.png" alt="facebook" class="social_image">
+            <img src="./assets/images/portfolio/twitter.png" alt="twitter" class="social_image">
+            <img src="./assets/images/portfolio/linkedin.png" alt="linkedin" class="social_image">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="form_main">
+  <section class="form__main">
     <div class="container">
-      <form class="form_main_wrap">
-        <h1 class="form_title">Get a Quote</h1>
-        <p class="form_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor nauris cindimentum nibh.</p>
-        <div class="form_wrap">
-          <div class="inrut_wrap">
-            <input type="text" required placeholder="Name (Required)">
+      <form class="form__main_wrap">
+        <div class="form__title">Get a Quote</div>
+        <p class="form__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor nauris cindimentum nibh.</p>
+        <div class="form__wrap">
+          <div class="inrut__wrap">
+            <input type="text" required placeholder="Name (Required)" pattern="^[a-zA-Z\s]+$">
             <input type="email" required placeholder="Email (Required)">
             <input type="text" placeholder="Subject">
             <input class="input_message" type="text" placeholder="Describe your project in detail...">
             <input type="submit" value="Отправить" class="form_submit">
-          </div>
-          
-          <div class="contact_info">
-            <h2 class="contact_info_title">Contact Information</h2>
-            <p class="contact_info_text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nib. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
-            <div class="contacts_holder">
-              <div class="contacts_wrap">
-                <img src="./assets/images/form/1.png" alt="">
-                <p class="contacts_text">Elm St. 14/05 Lost City</p>
+          </div>          
+          <div class="contact__info">
+            <h2 class="contact__info_title">Contact Information</h2>
+            <p class="contact__info_text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nib. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
+            <div class="contacts__holder">
+              <div class="contacts__wrap">
+                <img src="./assets/images/form/1.png" alt="form1">
+                <p class="contacts__text">Elm St. 14/05 Lost City</p>
               </div>
-              <div class="contacts_wrap">
-                <img src="./assets/images/form/2.png" alt="">
-                <p class="contacts_text">03528 331 86 35</p>
+              <div class="contacts__wrap">
+                <img src="./assets/images/form/2.png" alt="form2">
+                <a class="contacts__text" href="tel:035283318635">03528 331 86 35</a>
               </div>
-              <div class="contacts_wrap">
-                <img src="./assets/images/form/3.png" alt="">
-                <p class="contacts_text">info@singolo.com</p>
+              <div class="contacts__wrap">
+                <img src="./assets/images/form/3.png" alt="form3">
+                <a class="contacts__text" href="mailto:info@singolo.com">info@singolo.com</a>
               </div>
-            </div>
+            </div>            
           </div>
         </div>
       </form>
@@ -194,13 +194,13 @@
   </section>
   <footer class="footer">
     <div class="container">
-      <div class="footer_content">
-        <p class="footer_text">&copy; Copyright 2013</p>
-        <div class="social_wrap">
-          <img src="./assets/images/form/4.png" alt="">
-          <img src="./assets/images/form/5.png" alt="">
-          <img src="./assets/images/form/6.png" alt="">
-          <img src="./assets/images/form/7.png" alt="">
+      <div class="footer__content">
+        <p class="footer__text">&copy; Copyright 2013</p>
+        <div class="social__wrap">
+          <img src="./assets/images/form/4.png" alt="form4">
+          <img src="./assets/images/form/5.png" alt="form5">
+          <img src="./assets/images/form/6.png" alt="form6">
+          <img src="./assets/images/form/7.png" alt="form7">
         </div>
       </div>
     </div>

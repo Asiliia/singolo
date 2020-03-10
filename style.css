@@ -46,6 +46,9 @@ body {
     padding-top: 8px;
     margin-left: 29px;
 }
+.navigation__link_selected {
+	color: #f06c64;
+}
 .navigation__item:hover {
 	color: #f06c64;
 }
@@ -218,7 +221,7 @@ body {
 .about {
 	background: #f2f2f2;
 	color: #666d89;
-	padding: 33px 0;
+	padding: 33px 0 69px;
 	border-bottom: 6px solid #fff;
 }
 .about__title {
@@ -285,7 +288,7 @@ ul {
 	padding: 0;
 }
 .form__main {
-	padding: 34px 0 0px;
+	padding:  60px 0 0px;
 	color: #f0d8d9;
 	background-color: #f06c64;
 	border-bottom: 6px solid #ea676b;

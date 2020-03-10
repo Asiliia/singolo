@@ -233,7 +233,8 @@ body {
 	font-size: 18px;
 	font-weight: 300;
     margin-top: 21px;
-    line-height: 27px;
+	line-height: 27px;
+	text-align: justify;
 }
 .social {
 	display: -webkit-flex;
@@ -279,7 +280,8 @@ body {
 	font-size: 12px;
 	font-weight: 400;
     line-height: 18px;
-    margin-bottom: 27px;
+	margin-bottom: 27px;
+	text-align: justify;
 }
 .social_image {
     margin-right: 8px;
@@ -303,7 +305,8 @@ ul {
 	font-size: 18px;
 	font-weight: 300;
     line-height: 30px;
-    margin-bottom: 44px;
+	margin-bottom: 44px;
+	text-align: justify;
 }
 .form__main_wrap {
 	display: -webkit-flex;

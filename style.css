@@ -150,9 +150,8 @@ body {
     font-weight: 400;
     line-height: 20px;
 	text-align: justify;
-	
+    text-overflow: ellipsis;
 }
-
 .portfolio {
 	background: #2d303a;
 	padding: 20px 0;

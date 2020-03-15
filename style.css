@@ -186,7 +186,7 @@ body {
 	font-size: 18px;
     margin-bottom: 0px;
 }
-.images__wrap {
+#images__wrap {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -195,16 +195,16 @@ body {
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
-.images__wrap img {
+#images__wrap img {
 	width: 220px;
 	height: 187px;
 	display: block;
 	margin-top: 20px;
 }
-.images__wrap img:nth-child(n+13) {
+#images__wrap img:nth-child(n+13) {
     display: none;
-  }
-.settings {
+}
+#settings {
 	list-style: none;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -215,7 +215,7 @@ body {
 	margin-top: 15px;
     margin-bottom: 0;
 }
-.settings__item {
+#settings li {
 	padding: 3px 5px;
     margin: 0 5px;
 	font-size: 12px;
@@ -223,12 +223,12 @@ body {
 	border:1px solid #666d89;
 	transition: 0.5s all ease;
 }
-.settings__item:hover {
+#settings li:hover {
 	border:1px solid #fff;
 	color: #fff;
 	cursor: pointer;
 }
-.active {
+#settings li.active {
     color: #dedede;
     border: 1px solid #c5c5c5;
 }

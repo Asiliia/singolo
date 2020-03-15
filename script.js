@@ -44,9 +44,9 @@ SETTINGS.addEventListener('click', (event) => {
     SETTINGS.querySelectorAll('li').forEach(el => el.classList.remove('active'));
     PORTFOLIO_IMGS.querySelectorAll('img').forEach(el => el.classList.remove('selected'));
     event.target.classList.add('active');
-    let list = PORTFOLIO_IMGS.childNodes, i;    
-    for (i = list.length; i >= 0; i--) {
-        PORTFOLIO_IMGS.appendChild(list[Math.random() * i | 0]);
+    let countChildren = PORTFOLIO_IMGS.childNodes, i;    
+    for (i = countChildren.length; i >= 0; i--) {
+        PORTFOLIO_IMGS.appendChild(countChildren[Math.random() * i | 0]);
     }
 });
 

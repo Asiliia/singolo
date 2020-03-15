@@ -1,13 +1,15 @@
 const MENU = document.getElementById('navigation');
-const BUTTON = document.getElementById('btn');
-const CLOSE_BUTTON = document.getElementById('close-btn');
-const SLIDER = document.getElementById('image__wrap');
+//const BUTTON = document.getElementById('btn');
+//const CLOSE_BUTTON = document.getElementById('close-btn');
+//const SLIDER = document.getElementById('image__wrap');
 const H_PHONE = document.getElementById('hor__phone');
 const H_PHONE_LINK = "./assets/images/features/phone-horizontal.png";
 const H_PHONE_LINK_BLACK = "./assets/images/features/phone-horizontal-black.png";
 const V_PHONE = document.getElementById('vert__phone');
 const V_PHONE_LINK = "./assets/images/features/phone-vertical.png";
 const V_PHONE_LINK_BLACK = "./assets/images/features/phone-vertical-black.png";
+const SETTINGS = document.getElementById('settings');
+const PORTFOLIO_IMGS = document.getElementById('images__wrap');
 
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('navigation__selected'));
@@ -36,6 +38,15 @@ V_PHONE.addEventListener('click', (event) => {
         V_PHONE.src = V_PHONE_LINK_BLACK;
         event.target.classList.add('off');
     }    
+});
+
+SETTINGS.addEventListener('click', (event) => {
+    SETTINGS.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+    event.target.classList.add('active');
+    let list = PORTFOLIO_IMGS.childNodes, i;    
+    for (i = list.length; i >= 0; i--) {
+        PORTFOLIO_IMGS.appendChild(list[Math.random() * i | 0]);
+    }
 });
 
 /* BUTTON.addEventListener('click', () => {

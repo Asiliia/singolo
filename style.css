@@ -201,6 +201,11 @@ body {
 	display: block;
 	margin-top: 20px;
 }
+#images__wrap img.selected {
+	border-radius: 5px;
+	border: 5px solid #F06C64;
+	transition: border-color 0.3s linear;
+}
 #images__wrap img:nth-child(n+13) {
     display: none;
 }

@@ -42,12 +42,22 @@ V_PHONE.addEventListener('click', (event) => {
 
 SETTINGS.addEventListener('click', (event) => {
     SETTINGS.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+    PORTFOLIO_IMGS.querySelectorAll('img').forEach(el => el.classList.remove('selected'));
     event.target.classList.add('active');
     let list = PORTFOLIO_IMGS.childNodes, i;    
     for (i = list.length; i >= 0; i--) {
         PORTFOLIO_IMGS.appendChild(list[Math.random() * i | 0]);
     }
 });
+
+PORTFOLIO_IMGS.addEventListener('click', (event) => {
+    let isSelected = event.target.classList.contains('selected');
+    PORTFOLIO_IMGS.querySelectorAll('img').forEach(el => el.classList.remove('selected'));
+    if(!isSelected){
+        event.target.classList.add('selected');
+    }
+});
+
 
 /* BUTTON.addEventListener('click', () => {
     const subject = document.getElementById('subject').value.toString();

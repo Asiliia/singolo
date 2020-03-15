@@ -11,23 +11,23 @@
 </head>
 
 <body>
-<header class="header">
+<header id="home" class="header">
 	<div class="container">
 		<nav class="nav">
-			<a class="header__logo" href="#">
+			<a class="header__logo" href="#home">
         <span class="logo__text">singolo</span>
       </a>
-			<ul class="navigation">
-				<li><a class="navigation__item navigation__link_selected" href="#">home</a></li>
-				<li><a class="navigation__item" href="#">services</a></li>
-				<li><a class="navigation__item" href="#">portfolio</a></li>
-				<li><a class="navigation__item" href="#">about</a></li>
-				<li><a class="navigation__item" href="#">contact</a></li>
+			<ul id="navigation">
+				<li><a class="home navigation__selected" href="#home">home</a></li>
+				<li><a class="info navigation__item" href="#info">services</a></li>
+				<li><a class="portfolio" href="#portfolio">portfolio</a></li>
+				<li><a class="about" href="#about">about</a></li>
+				<li><a class="form__main" href="#form__main">contact</a></li>
 			</ul>
 		</nav>
 	</div>
 </header>
-<section class="main">
+<section id="main">
 	<div class="container">
 		<div class="slides__wrap">
 			<div class="image__wrap">
@@ -39,7 +39,7 @@
 		</div>
 	</div>
 </section>
-<section class="info">
+<section id="info">
 	<div class="container">
 		<h1 class="info__title">Our Services</h1>
 		<p class="info__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -89,7 +89,7 @@
 		</ul>
 	</div>
 </section>
-<section class="portfolio">
+<section id="portfolio">
     <div class="container">
       <h2 class="portfolio__title">Portfolio</h2>
       <p class="portfolio__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget laciniaodio sem nec elit.</p>
@@ -115,7 +115,7 @@
       </div>
     </div>
   </section>
-  <section class="about">
+<section id="about">
     <div class="container">
       <h2 class="about__title">About Us</h2>
       <p class="about__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -155,9 +155,8 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <section class="form__main">
+</section>
+<section id="form__main">
     <div class="container">
       <form class="form__main_wrap">
         <div class="form__title">Get a Quote</div>
@@ -191,9 +190,9 @@
         </div>
       </form>
     </div>
-  </section>
+</section>
   
-  <footer class="footer">
+<footer class="footer">
     <div class="container">
       <div class="footer__content">
         <p class="footer__text">&copy; Copyright 2013</p>
@@ -205,6 +204,7 @@
         </div>
       </div>
     </div>
-  </footer>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

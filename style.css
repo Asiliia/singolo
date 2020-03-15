@@ -76,7 +76,7 @@ body {
     align-items: center;
     position: relative;
 }
-.image__wrap {
+#image__wrap {
     width: 100%;
     display: flex;
     align-items: center;

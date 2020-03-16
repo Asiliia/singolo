@@ -162,12 +162,13 @@
         <div class="form__title">Get a Quote</div>
         <p class="form__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor nauris cindimentum nibh.</p>
         <div class="form__wrap">
-          <div class="inrut__wrap">
-            <input type="text" required placeholder="Name (Required)" pattern="^[a-zA-Z\s]+$">
-            <input type="email" required placeholder="Email (Required)">
-            <input type="text" placeholder="Subject">
-            <input class="input_message" type="text" placeholder="Describe your project in detail...">
-            <input type="submit" value="Отправить" class="form_submit">
+          <div id="inrut__wrap">
+            <input type="text" required placeholder="Name (Required)" pattern="^[a-zA-Z\s]+$" id="name" maxlength=20>
+            <input type="email" required placeholder="Email (Required)" id="email" maxlength=20>
+            <input type="text" placeholder="Subject" id="subject" maxlength=20>
+            <textarea class="input_message" form="form__main" placeholder="Describe your project in detail..." id="description" maxlength=400></textarea>
+
+            <input type="submit" value="Submit" id="form_submit" class="btn">
           </div>          
           <div class="contact__info">
             <h2 class="contact__info_title">Contact Information</h2>
@@ -204,6 +205,18 @@
       </div>
     </div>
 </footer>
+<div id="message-block" class="hidden">
+  <div id="message">
+      <br><b>The letter was sent</b>
+      <br><span>Name: </span><span id="msg_name"></span>
+      <br><span>Email: </span><span id="msg_email"></span>
+      <br><span>Subject: </span><span id="msg_subject"></span>
+      <br><span>Description: </span><span id="msg_description"></span>
+      <div>
+      <button id="close-btn" class="btn">OK</button>
+      </div>
+  </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 const MENU = document.getElementById('navigation');
-//const BUTTON = document.getElementById('btn');
-//const CLOSE_BUTTON = document.getElementById('close-btn');
+const BUTTON = document.getElementById('form_submit');
+const CLOSE_BUTTON = document.getElementById('close-btn');
 //const SLIDER = document.getElementById('image__wrap');
 const H_PHONE = document.getElementById('hor__phone');
 const H_PHONE_LINK = "./assets/images/features/phone-horizontal.png";
@@ -10,6 +10,7 @@ const V_PHONE_LINK = "./assets/images/features/phone-vertical.png";
 const V_PHONE_LINK_BLACK = "./assets/images/features/phone-vertical-black.png";
 const SETTINGS = document.getElementById('settings');
 const PORTFOLIO_IMGS = document.getElementById('images__wrap');
+const INPUT = document.getElementById('inrut__wrap');
 
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('navigation__selected'));
@@ -58,14 +59,19 @@ PORTFOLIO_IMGS.addEventListener('click', (event) => {
     }
 });
 
-
-/* BUTTON.addEventListener('click', () => {
-    const subject = document.getElementById('subject').value.toString();
-    document.getElementById('result').innerText = subject;
-    document.getElementById('message-block').classList.remove('hidden');
+BUTTON.addEventListener('click', () => {
+    if(document.getElementById('name').checkValidity() && document.getElementById('email').checkValidity()){
+        const subject = document.getElementById('subject').value.toString();
+        const description = document.getElementById('description').value.toString();
+        document.getElementById('msg_name').innerText = document.getElementById('name').value.toString();
+        document.getElementById('msg_email').innerText = document.getElementById('email').value.toString();
+        document.getElementById('msg_subject').innerText = subject ? subject : "Without subject";
+        document.getElementById('msg_description').innerText = description ? description : "Without description";
+        document.getElementById('message-block').classList.remove('hidden');
+    }
 });
 
 CLOSE_BUTTON.addEventListener('click', (event) => {
     MENU.querySelectorAll('result').innerText = '';
     document.getElementById('message-block').classList.add('hidden');
-}); */
+});

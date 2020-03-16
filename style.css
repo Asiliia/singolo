@@ -58,14 +58,15 @@ body {
 #navigation a:hover {
 	color: #f06c64;
 }
+
+
+/* Slider */
 #main {
 	padding: 50px 0 60px;
 	background-color: #f06c64;
 	border-bottom: 6px solid #ea676b;
 }
-
-/* Slider */
-.slides__wrap {
+#slides__wrap {
     padding: 0 73px;
     display: -webkit-flex;
     display: -moz-flex;
@@ -76,28 +77,39 @@ body {
     align-items: center;
     position: relative;
 }
-#image__wrap {
+
+.slide__one {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.slides__button-left {
+
+figure.hidden {
+	display: none; 
+}
+
+.slide__two {
+	width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#slides__button-left {
 	position: absolute;
-	top: 48%;
+	top: 230px;
 	left: 0;
 	transition: 0.5s all ease;
 }
-.slides__button-right {
+#slides__button-right {
 	position: absolute;
-	top: 48%;
+	top: 230px;
 	right: 0;
 	transition: 0.5s all ease;
 }
-.slides__button-right:hover, .slides__button-left:hover {
-    cursor: pointer;
+#slides__button-right:hover, #slides__button-left:hover {
+	cursor: pointer;
 }
-
 
 #info {
 	padding: 60px 0 41px;
@@ -387,8 +399,8 @@ textarea {
 .btn:hover {
     background-color:#a33731;;
 }
-.input_message {
-	padding: 0 0 167px 15px;
+#description {
+	padding: 10px 0 167px 15px;
 }
 .contact__info_title {
 	font-size: 18px;
@@ -473,7 +485,7 @@ a {
 	border-radius: 5px;
 	z-index: 2;
 }
-#message-block.hidden {
+.hidden {
     display: none;
 }
 #message {

@@ -29,14 +29,21 @@
 </header>
 <section id="main">
 	<div class="container">
-		<div class="slides__wrap">
-			<div id="image__wrap">
-				<img src="./assets/images/features/phone-vertical.png" alt="phonevert" id="vert__phone" class="off">
-				<img src="./assets/images/features/phone-horizontal.png" alt="phonehor" id="hor__phone">
-			</div>
-			<a href="#"><img src="./assets/images/features/left.png" alt="left" class="slides__button-left"></a>
-			<a href="#"><img src="./assets/images/features/right.png" alt="right" class="slides__button-right"></a>
-		</div>
+
+		<div id="slides__wrap">
+			<figure class="slide__one visible" id='slide__one js'>
+				<img src="./assets/images/features/phone-vertical.png" alt="phonevert" class="vertical">
+				<img src="./assets/images/features/phone-horizontal.png" alt="phonehor" class="horizontal">
+      </figure>
+      <figure class="slide__two hidden blue">
+				<img src="./assets/images/features/phone-side.png" alt="phone-side" class="phone">
+        <img src="./assets/images/features/phone-center.png" alt="phone-center" class="phone">
+				<img src="./assets/images/features/phone-side.png" alt="phone-side" class="phone">
+			</figure>
+			<a href="#"><img src="./assets/images/features/left.png" alt="left" id="slides__button-left"></a>
+			<a href="#"><img src="./assets/images/features/right.png" alt="right" id="slides__button-right"></a>
+    </div>
+
 	</div>
 </section>
 <section id="info">
@@ -166,8 +173,7 @@
             <input type="text" required placeholder="Name (Required)" pattern="^[a-zA-Z\s]+$" id="name" maxlength=20>
             <input type="email" required placeholder="Email (Required)" id="email" maxlength=20>
             <input type="text" placeholder="Subject" id="subject" maxlength=20>
-            <textarea class="input_message" form="form__main" placeholder="Describe your project in detail..." id="description" maxlength=400></textarea>
-
+            <textarea form="form__main" placeholder="Describe your project in detail..." id="description" maxlength=400></textarea>
             <input type="submit" value="Submit" id="form_submit" class="btn">
           </div>          
           <div class="contact__info">

@@ -1,4 +1,5 @@
 const MENU = document.getElementById('navigation');
+const SECTIONS = document.querySelectorAll('section');
 const BUTTON = document.getElementById('form_submit');
 const CLOSE_BUTTON = document.getElementById('close-btn');
 //const SLIDER = document.getElementById('image__wrap');
@@ -19,6 +20,13 @@ MENU.addEventListener('click', (event) => {
     if(sectionId) { 
         sectionId.scrollIntoView();
     }
+});
+
+window.addEventListener('scroll', () => {     
+    let index = SECTIONS.length;
+    while(--index && window.scrollY + 50 < SECTIONS[index].offsetTop) {}  
+    MENU.querySelectorAll('a').forEach(el => el.classList.remove('navigation__selected'));
+    MENU.querySelectorAll('a')[index].classList.add('navigation__selected');
 });
 
 H_PHONE.addEventListener('click', (event) => {
@@ -63,8 +71,6 @@ BUTTON.addEventListener('click', () => {
     if(document.getElementById('name').checkValidity() && document.getElementById('email').checkValidity()){
         const subject = document.getElementById('subject').value.toString();
         const description = document.getElementById('description').value.toString();
-        document.getElementById('msg_name').innerText = document.getElementById('name').value.toString();
-        document.getElementById('msg_email').innerText = document.getElementById('email').value.toString();
         document.getElementById('msg_subject').innerText = subject ? subject : "Without subject";
         document.getElementById('msg_description').innerText = description ? description : "Without description";
         document.getElementById('message-block').classList.remove('hidden');

@@ -466,12 +466,12 @@ a {
     position: fixed;
     width: 400px;
     height: auto;
-    top: 10%;
+    top: 30%;
     left: 30%;
 	background: #f06c64;
-	z-index: 100;
 	border: 1px solid #f0d8d9;
 	border-radius: 5px;
+	z-index: 2;
 }
 #message-block.hidden {
     display: none;

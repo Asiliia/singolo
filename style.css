@@ -23,7 +23,7 @@ body {
     font-size: 25px;
     font-weight: bold;
 }
-.logo__text:after {
+#logo__text:after {
 	content: "*";
 	color: #f06c64; 
 }
@@ -75,26 +75,97 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+	position: relative;
+	overflow: hidden;
+}
+
+.slide {
+	display: none;
+	animation: 0.5s ease-in-out;
+	margin: 0 auto;
 }
 
 .slide__one {
-    width: 100%;
-    display: flex;
+    width: 100%;    
     align-items: center;
     justify-content: space-between;
 }
 
-figure.hidden {
-	display: none; 
-}
-
 .slide__two {
 	width: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
+
+figure.active, 
+figure.next {
+	display: flex; 
+}
+
+.next {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.to-left {
+	animation-name: left;
+  }
+  
+  .from-right {
+	animation-name: right;
+  }
+  
+  .to-right {
+	animation-name: right;
+	animation-direction: reverse;
+  }
+  
+  .from-left {
+	animation-name: left;
+	animation-direction: reverse;
+  }
+  
+  @keyframes left {
+	from {
+	  left: 0;
+	}
+	to {
+	  left: -100%;
+	}
+  }
+  
+  @keyframes right {
+	from {
+	  left: 100%;
+	}
+	to {
+	  left: 0;
+	}
+  }
+  
+  @media (max-width: 960px) {
+	.description {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  }
+  
+  @media (max-width: 640px) {
+	.control > .arrow {
+	  display: none;
+	}
+  
+	.project-name {
+	  display: none;
+	}
+  
+	.description {
+	  border: 0;
+	}
+  }
+
+
 #slides__button-left {
 	position: absolute;
 	top: 230px;

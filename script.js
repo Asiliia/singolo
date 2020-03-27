@@ -98,7 +98,6 @@ SLIDER_LEFT.addEventListener('click', () => {
 
 SETTINGS.addEventListener('click', (event) => {
     SETTINGS.querySelectorAll('li').forEach(el => el.classList.remove('active'));
-    PORTFOLIO_IMGS.querySelectorAll('img').forEach(el => el.classList.remove('selected'));
     event.target.classList.add('active');
     let countChildren = PORTFOLIO_IMGS.childNodes, i;    
     for (i = countChildren.length; i >= 0; i--) {
@@ -181,7 +180,6 @@ SLIDER_RIGHT.addEventListener('click', function() {
 });
 
 const swipedetect = (el) => {
-  
 	let surface = el;
 	let startX = 0;
 	let startY = 0;
@@ -194,8 +192,8 @@ const swipedetect = (el) => {
 	let restraint = 100;
 	let allowedTime = 300;
 
-	surface.addEventListener('mousedown', function(e){
-		startX = e.pageX;
+	surface.addEventListener('mousedown', function(e){       
+        startX = e.pageX;
 		startY = e.pageY;
 		startTime = new Date().getTime();
 		e.preventDefault();
@@ -209,16 +207,19 @@ const swipedetect = (el) => {
 			if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
 				if ((distX > 0)) {
 					if (isEnabled) {
-						previousItem(currentItem);
+                        previousItem(currentItem);
 					}
 				} else {
 					if (isEnabled) {
-						nextItem(currentItem);
+                        nextItem(currentItem);
 					}
 				}
 			}
-		}
-		e.preventDefault();
+        }
+        let isActive = document.getElementsByTagName('figure')[0].classList.contains('active');   
+        SLIDER_LEFT.src = isActive ? './assets/images/features/left-blue.png' : './assets/images/features/left.png';
+        SLIDER_RIGHT.src = isActive ? './assets/images/features/right-blue.png' : './assets/images/features/right.png';
+  		e.preventDefault();
 	}, false);
 
 	surface.addEventListener('touchstart', function(e){
@@ -263,7 +264,7 @@ const swipedetect = (el) => {
 					}
 			}
 			e.preventDefault();
-	}, false);
+    }, false);
 }
 
 var el = document.querySelector('#slides__wrap');

@@ -24,19 +24,18 @@ MENU.addEventListener('click', (event) => {
     event.target.classList.add('navigation__selected');
     let sectionId = document.getElementById(event.target.classList[0].toString());
     if(sectionId) { 
-        sectionId.scrollIntoView();
-    }
+       sectionId.scrollIntoView(false);
+    }  
 });
 
 HEADER.addEventListener('click', () => {
-    let home = document.getElementById('navigation').getElementsByTagName('li').first();
-    home.classList.add('navigation__selected');
+	if(window.scrollY > 0){
+		window.scrollBy(0, -(window.scrollY));
+	}
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('navigation__selected'));
-    let sectionId = document.getElementById(event.target.classList[0].toString());
-    if(sectionId) { 
-        sectionId.scrollIntoView();
-    }
-});
+    let home = document.querySelector('#navigation>li>a');
+	home.classList.add('navigation__selected');	
+}); 
 
 window.addEventListener('scroll', () => {     
     let index = SECTIONS.length;
@@ -113,20 +112,22 @@ PORTFOLIO_IMGS.addEventListener('click', (event) => {
     }
 });
 
-BUTTON.addEventListener('click', () => {
+BUTTON.addEventListener('click', (e) => {
     if(document.getElementById('name').checkValidity() && document.getElementById('email').checkValidity()){
         const subject = document.getElementById('subject').value.toString();
         const description = document.getElementById('description').value.toString();
         document.getElementById('msg_subject').innerText = subject ? subject : "Without subject";
         document.getElementById('msg_description').innerText = description ? description : "Without description";
         document.getElementById('message-block').classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
+		document.body.style.overflow = 'hidden';
+		e.preventDefault();
+		document.body.style.overflow = 'hidden';
     }
 });
 
 CLOSE_BUTTON.addEventListener('click', (event) => {
-    document.body.style.overflow = 'unset';
-    MENU.querySelectorAll('result').innerText = '';
+	document.body.style.overflow = 'unset';
+	document.querySelectorAll('.filled').forEach(i => i.value = '');
     document.getElementById('message-block').classList.add('hidden');
 });
 

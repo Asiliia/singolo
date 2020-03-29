@@ -816,7 +816,22 @@ a {
 .contact__info {
 	padding: 15vw 0 0 0;
 }
+.footer {
+	padding: 15vw 0;
+}
 
+.footer__content {
+	justify-content: center;
+}
+
+.social__wrap img {
+	width: 25vw;
+	margin-right: 5vw;
+}
+
+.footer__text {
+	display: none;
+}
 
 }
 

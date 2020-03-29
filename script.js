@@ -1,6 +1,7 @@
 const MENU = document.getElementById('navigation');
 const SECTIONS = document.querySelectorAll('section');
 const HEADER = document.getElementById('logo__text');
+const HAMB = document.getElementById('phone_menu');
 
 const CLOSE_BUTTON = document.getElementById('close-btn');
 const SLIDER_RIGHT = document.getElementById('slides__button-right');
@@ -18,6 +19,14 @@ const SETTINGS = document.getElementById('settings');
 const PORTFOLIO_IMGS = document.getElementById('images__wrap');
 const INPUT = document.getElementById('inrut__wrap');
 const BUTTON = document.getElementById('form_submit');
+
+HAMB.addEventListener('click', (event) => {
+	if (event.target.classList.contains('rotate')) {
+		event.target.classList.remove('rotate'); 
+	} else {
+		event.target.classList.add('rotate'); 
+	}
+});
 
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('navigation__selected'));

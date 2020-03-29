@@ -30,6 +30,9 @@ body {
 	content: "*";
 	color: #f06c64; 
 }
+#phone_menu {
+	display: none;
+}
 .nav {
     display: -webkit-flex;
     display: -moz-flex;
@@ -142,28 +145,6 @@ figure.next {
 	  left: 0;
 	}
   }
-  
-  @media (max-width: 960px) {
-	.description {
-	  flex-direction: column;
-	  align-items: center;
-	}
-  }
-  
-  @media (max-width: 640px) {
-	.control > .arrow {
-	  display: none;
-	}
-  
-	.project-name {
-	  display: none;
-	}
-  
-	.description {
-	  border: 0;
-	}
-  }
-
 
 #slides__button-left {
 	position: absolute;
@@ -216,7 +197,7 @@ figure.next {
 	justify-content: space-between;
 }
 .info__item {
-    width: 300px;
+    min-width: 300px;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -568,3 +549,129 @@ a {
 #message div {
 	margin-top: 15px;
 }
+
+
+@media (max-width: 375px) {	
+	.info__list {
+	  flex-direction: column;
+	  align-items: left;
+	}
+	.info__title {
+		font-size: 24vw;
+	}
+	.info__text {
+		font-size: 15vw;
+		line-height: 25vw;
+		text-align: left;
+	}
+	.info__item img {
+		min-width: 40vw;
+		min-height: 40vw;
+		margin-right: 20vw;
+		margin-top: 20vw;
+	}
+	.list__item-title {
+		font-size: 15vw;
+	}
+	.list__item-text {
+		font-size: 10vw;
+		font-weight: 400;
+		line-height: 20vw;
+		text-align: justify;
+		max-height: 60vw;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	#navigation {
+		display: none;
+	  }
+	
+	#phone_menu {
+		display: block;
+	}
+	.header__logo {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.portfolio__title {
+		font-size: 24vw;
+		margin-top: 10vw;
+		margin-bottom: 21vw;
+	}
+	.portfolio__text {
+		font-size: 15vw;
+	}
+	#settings li {
+		padding: 3vw 5vw;
+		margin: 0 5vw 0 0;
+		font-size: 8vw;
+		border-radius: 5vw;
+		border:1vw solid #666d89;
+	}
+	#settings {
+		margin-top: 15vw;
+	}
+	#images__wrap img {
+		width: 110vw;
+		height: auto;
+		margin-top: 20vw;
+	}
+	.container {
+		padding: 0 20vw;
+	}
+	.about__title {
+		font-size: 24vw;
+   }
+   .about__text {
+	font-size: 15vw;
+	line-height: 25vw;
+	}
+	.photo__wrap {
+	  flex-direction: column;
+	  align-items: left;
+	  margin-top: 20vw;
+	}
+	.card__title {
+		font-size: 15vw;
+		margin-top: 10vw;
+	}
+	.card__text {
+		font-size: 9vw;
+		line-height: 18vw;
+		text-align: justify;
+	}
+	.card {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.card_img {
+		width: 100%;
+		height: auto;
+	}
+	.social_image {
+		margin-right: 5vw;
+		border-radius: 50%;
+		width: 100px;
+		margin-bottom: 20vw;
+	}
+	.form__title {
+		font-size: 30px;
+		font-weight: 900;
+		margin-bottom: 0;
+	}
+  }
+  
+  @media (max-width: 640px) {
+	.control > .arrow {
+	  display: none;
+	}
+  
+	.project-name {
+	  display: none;
+	}
+  
+	.description {
+	  border: 0;
+	}
+  }

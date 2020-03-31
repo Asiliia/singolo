@@ -21,20 +21,30 @@ const PORTFOLIO_IMGS = document.getElementById('images__wrap');
 const INPUT = document.getElementById('inrut__wrap');
 const BUTTON = document.getElementById('form_submit');
 
-
 HAMB.addEventListener('click', (event) => {
 	if (event.target.classList.contains('rotate')) {							
 		HEADER__HUMB.style.display = 'block';	
 		event.target.classList.remove('rotate'); 
-		hh.style.display = 'none';
 		event.preventDefault();
-	} else {
-				
-	HEADER__HUMB.style.display = 'none';
-	event.target.classList.add('rotate');	
-	hh.style.display = 'block';
-	event.preventDefault();
+	} else {				
+		HEADER__HUMB.style.display = 'none';
+		event.target.classList.add('rotate');	
+		event.preventDefault();
 	}
+});
+
+document.addEventListener('click', (event) => {
+	if (event.target.closest('#header__hamb') || event.target.closest('#phone_menu_mobile')) {
+		return;
+	}
+	HEADER__HUMB.style.display = 'none';
+	HAMB.classList.add('rotate');
+});
+
+HEADER__HUMB.addEventListener('click', (event) => {
+	HEADER__HUMB.style.display = 'none';
+	HAMB.classList.add('rotate');
+	event.preventDefault();	
 });
 
 MENU.forEach(function(item) {
@@ -43,7 +53,7 @@ MENU.forEach(function(item) {
 		event.target.classList.add('navigation__selected');
 		let sectionId = document.getElementById(event.target.classList[0].toString());
 		if(sectionId) { 
-		sectionId.scrollIntoView(false);
+			window.scrollBy(0, sectionId.getBoundingClientRect().top-71);
 		}  
 	});
 });
@@ -102,7 +112,6 @@ BUTTON.addEventListener('click', (e) => {
         document.getElementById('message-block').classList.remove('hidden');
 		document.body.style.overflow = 'hidden';
 		e.preventDefault();
-		document.body.style.overflow = 'hidden';
     }
 });
 

@@ -185,6 +185,7 @@ const swipedetect = (el) => {
 		distX = e.pageX - startX;
 		distY = e.pageY - startY;
 		elapsedTime = new Date().getTime() - startTime;
+		let isActive = document.getElementsByTagName('figure')[0].classList.contains('active'); 
 		if (elapsedTime <= allowedTime){
 			if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
 				if ((distX > 0)) {
@@ -196,11 +197,11 @@ const swipedetect = (el) => {
                         nextItem(currentItem);
 					}
 				}
+				SLIDER_LEFT.src = isActive ? './assets/images/features/left-blue.png' : './assets/images/features/left.png';
+				SLIDER_RIGHT.src = isActive ? './assets/images/features/right-blue.png' : './assets/images/features/right.png';
 			}
-        }
-        let isActive = document.getElementsByTagName('figure')[0].classList.contains('active');   
-        SLIDER_LEFT.src = isActive ? './assets/images/features/left-blue.png' : './assets/images/features/left.png';
-        SLIDER_RIGHT.src = isActive ? './assets/images/features/right-blue.png' : './assets/images/features/right.png';
+        }         
+       
   		e.preventDefault();
 	}, false);
 

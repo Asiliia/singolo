@@ -24,9 +24,21 @@ body {
 	z-index: 99;
 }
 
-.header__mobile {
+#header__mobile {
 	display: none;
 }
+
+#header__hamb {
+	display: none;;
+	width: 210vw;
+	height: 100%;
+	background-color: #2d303a;
+	color: #fff;
+	border-bottom: 0;
+	padding: 12vw 0;
+	position: fixed;	
+	z-index: 99;
+} 
 
 .hidden {
 	display: none;
@@ -37,7 +49,7 @@ body {
 	font-weight: bold;
 }
 
-#logo__text:after {
+.logo__text:after {
 	content: "*";
 	color: #f06c64;
 }
@@ -57,7 +69,7 @@ body {
 	text-transform: uppercase;
 }
 
-#navigation {
+.navigation {
 	list-style: none;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -69,7 +81,7 @@ body {
 	margin: 0;
 }
 
-#navigation a {
+.navigation a {
 	padding-top: 8px;
 	margin-left: 29px;
 }
@@ -78,7 +90,7 @@ body {
 	color: #f06c64;
 }
 
-#navigation a:hover {
+.navigation a:hover {
 	color: #f06c64;
 }
 
@@ -633,71 +645,91 @@ a {
 }
 
 
-@media (max-width: 375px) {
-	
-.header__mobile {
+@media (max-width: 375px) {	
+#header__mobile {
 	display: block;
 	height: 20vw;
 	background-color: #2d303a;
 	color: #fff;
 	border-bottom: 0;
 	padding: 12vw 0;
-	position: relative;
+	position: sticky;
+	top: 0;
 	z-index: 0;
 }
-
 .header {
 	display: none;
 }
 
+.nav {	
+	align-items: left;
+}
+
+.nav__hamb {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	padding-top: calc(100% - 60vw);
+	padding-left: calc(100% - 150vw);
+}
+
+.navigation {
+	flex-direction: column;
+	align-items: left;
+	font-size: 18vw;
+	width: 100%;
+	letter-spacing: -3.5%;
+
+} 
+.navigation > li   {
+	margin: 8vw;
+
+}
 #slides__button-left {
 	width: 10vw;
 }
-
 #slides__button-right {
 	width: 10vw;
 }
-
 #phone_menu {
 	width: 12vw;
+	display: block;
 }
-
+#phone_menu_mobile {
+	width: 12vw;
+	display: block;
+}
 .header__logo {
 	font-size: 13vw;
-}
-
-.header__logo {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin-right: calc(100% - 100vw);
 }
-
 .info__list {
 	flex-direction: column;
 	align-items: left;
 }
-
 .info__title {
 	font-size: 24vw;
 }
-
 .info__text {
 	font-size: 15vw;
 	line-height: 25vw;
 	text-align: left;
 }
-
 .info__item img {
 	min-width: 40vw;
 	min-height: 40vw;
 	margin-right: 20vw;
 	margin-top: 20vw;
 }
-
 .list__item-title {
 	font-size: 15vw;
 }
-
 .list__item-text {
 	font-size: 10vw;
 	font-weight: 400;
@@ -708,24 +740,14 @@ a {
 	text-overflow: ellipsis;
 }
 
-#navigation {
-	display: none;
-}
-
-#phone_menu {
-	display: block;
-}
-
 .portfolio__title {
 	font-size: 24vw;
 	margin-top: 10vw;
 	margin-bottom: 21vw;
 }
-
 .portfolio__text {
 	font-size: 15vw;
 }
-
 #settings li {
 	padding: 3vw 5vw;
 	margin: 0 5vw 0 0;
@@ -733,114 +755,92 @@ a {
 	border-radius: 5vw;
 	border: 1vw solid #666d89;
 }
-
 #settings {
 	margin-top: 15vw;
 }
-
 #images__wrap img {
 	width: 110vw;
 	height: auto;
 	margin-top: 20vw;
 }
-
 .container {
 	padding: 0 20vw;
 }
-
 .about__title {
 	font-size: 24vw;
 }
-
 .about__text {
 	font-size: 15vw;
 	line-height: 25vw;
 }
-
 .photo__wrap {
 	flex-direction: column;
 	align-items: left;
 	margin-top: 20vw;
 }
-
 .card__title {
 	font-size: 15vw;
 	margin-top: 10vw;
 }
-
 .card__text {
 	font-size: 9vw;
 	line-height: 18vw;
 	text-align: justify;
 }
-
 .card {
 	width: 100%;
 	margin-bottom: 20px;
 }
-
 .card_img {
 	width: 100%;
 	height: auto;
 }
-
 .social_image {
 	margin-right: 5vw;
 	border-radius: 50%;
 	width: 100px;
 	margin-bottom: 20vw;
 }
-
 .form__title {
 	font-size: 24vw;
 	margin-bottom: 0;
 }
-
 .form__text {
 	font-size: 15vw;
 	line-height: 25vw;
 	text-align: left;
 }
-
 .contact__info_text {
 	font-size: 9vw;
 	line-height: 18vw;
 	margin-top: 0;
 }
-
 .form__wrap {
 	flex-direction: column;
 	align-items: left;
 }
-
 .contact__info_title {
 	font-size: 12vw;
 	margin: 0;
 }
-
 .contacts__text {
 	font-size: 9vw;
 	width: 100%;
 	margin: 0 0 0 6vw;
 }
-
 .contacts__wrap {
 	margin: 0 0 6vw 0;
 }
-
 .contacts__wrap img {
 	position: relative;
 	width: 8vw;
 }
-
 .contacts__holder {
 	width: 100%;
 }
-
 #form__main {
 	padding: 30vw 0 20vw 0;
 }
-
 form input,
 form textarea {
 	background-color: #d6564f;

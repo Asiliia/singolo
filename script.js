@@ -1,7 +1,8 @@
-const MENU = document.getElementById('navigation');
+const MENU = [...document.querySelectorAll('.navigation')];
 const SECTIONS = document.querySelectorAll('section');
-const HEADER = document.getElementById('logo__text');
-const HAMB = document.getElementById('phone_menu');
+const HEADER = [...document.querySelectorAll('.logo__text')]; 
+const HAMB = document.getElementById('phone_menu_mobile');
+const HEADER__HUMB =  document.getElementById('header__hamb');
 
 const CLOSE_BUTTON = document.getElementById('close-btn');
 const SLIDER_RIGHT = document.getElementById('slides__button-right');
@@ -20,37 +21,49 @@ const PORTFOLIO_IMGS = document.getElementById('images__wrap');
 const INPUT = document.getElementById('inrut__wrap');
 const BUTTON = document.getElementById('form_submit');
 
+
 HAMB.addEventListener('click', (event) => {
-	if (event.target.classList.contains('rotate')) {
+	if (event.target.classList.contains('rotate')) {							
+		HEADER__HUMB.style.display = 'block';	
 		event.target.classList.remove('rotate'); 
+		hh.style.display = 'none';
+		event.preventDefault();
 	} else {
-		event.target.classList.add('rotate'); 
+				
+	HEADER__HUMB.style.display = 'none';
+	event.target.classList.add('rotate');	
+	hh.style.display = 'block';
+	event.preventDefault();
 	}
 });
 
-MENU.addEventListener('click', (event) => {
-    MENU.querySelectorAll('a').forEach(el => el.classList.remove('navigation__selected'));
-    event.target.classList.add('navigation__selected');
-    let sectionId = document.getElementById(event.target.classList[0].toString());
-    if(sectionId) { 
-       sectionId.scrollIntoView(false);
-    }  
+MENU.forEach(function(item) {
+	item.addEventListener('click', (event) => {
+		MENU.forEach(m => m.querySelectorAll('a').forEach(el => el.classList.remove('navigation__selected')));
+		event.target.classList.add('navigation__selected');
+		let sectionId = document.getElementById(event.target.classList[0].toString());
+		if(sectionId) { 
+		sectionId.scrollIntoView(false);
+		}  
+	});
 });
 
-HEADER.addEventListener('click', () => {
+HEADER.forEach(function(item) {
+	item.addEventListener('click', () => {
 	if(window.scrollY > 0){
 		window.scrollBy(0, -(window.scrollY));
 	}
-    MENU.querySelectorAll('a').forEach(el => el.classList.remove('navigation__selected'));
-    let home = document.querySelector('#navigation>li>a');
+    MENU.forEach(m => m.querySelectorAll('a').forEach(el => el.classList.remove('navigation__selected')));
+    let home = document.querySelector('.navigation>li>a');
 	home.classList.add('navigation__selected');	
 }); 
+});
 
 window.addEventListener('scroll', () => {     
     let index = SECTIONS.length;
     while(--index && window.scrollY + 50 < SECTIONS[index].offsetTop) {}  
-    MENU.querySelectorAll('a').forEach(el => el.classList.remove('navigation__selected'));
-    MENU.querySelectorAll('a')[index].classList.add('navigation__selected');
+    MENU.forEach(m => m.querySelectorAll('a').forEach(el => el.classList.remove('navigation__selected')));
+    MENU.forEach(m => m.querySelectorAll('a')[index].classList.add('navigation__selected'));
 });
 
 PHONES.addEventListener('click', (event) => {
@@ -62,47 +75,6 @@ PHONES.addEventListener('click', (event) => {
         event.target.classList.add('off');
     }    
 });
-
-
-
-
-/* let switchSlider = () => {
-    document.getElementById('inrut__wrap');
-    
-    let pointer = 0;
-    let figures = document.getElementsByTagName('figure');
-
-
-
-
-
-    for (let i = 0; i < figures.length; i++) {
-        if (figures[i].classList.contains('visible')) {
-            figures[i].classList.add('hidden');
-            figures[i].classList.remove('visible');
-            pointer = i;
-        }
-    }
-    if (++pointer === figures.length) {
-        pointer = 0;
-    }
-    
-    let isBlue = figures[pointer].classList.contains('blue');
-    SLIDER_LEFT.src = isBlue ? './assets/images/features/left-blue.png' : './assets/images/features/left.png';
-    SLIDER_RIGHT.src = isBlue ? './assets/images/features/right-blue.png' : './assets/images/features/right.png'; 
-    document.getElementById('main').style.backgroundColor = isBlue ? "#648BF0" :  "#f06c64";
-    figures[pointer].classList.remove('hidden');
-    figures[pointer].classList.add('visible'); 
-};
-
-SLIDER_RIGHT.addEventListener('click', () => {
-   switchSlider(); 
-});
-
-SLIDER_LEFT.addEventListener('click', () => {
-    switchSlider();
-}); */
-
 
 SETTINGS.addEventListener('click', (event) => {
     SETTINGS.querySelectorAll('li').forEach(el => el.classList.remove('active'));

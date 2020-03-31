@@ -10,15 +10,15 @@
     <link href="style.css" rel="stylesheet">
 </head>
 
-<body>
-<header id="home" class="header">
+<body id="home">
+<header class="header">
 	<div class="container">
 		<nav class="nav">
      
 			<a class="header__logo" href="#home">
-        <span id="logo__text">singolo</span>
+        <span class="logo__text">singolo</span>
       </a>
-			<ul id="navigation">
+			<ul class="navigation">
 				<li><a class="home navigation__selected" href="#home">home</a></li>
 				<li><a class="info" href="#info">services</a></li>
 				<li><a class="portfolio" href="#portfolio">portfolio</a></li>
@@ -29,12 +29,32 @@
 	</div>
 </header>
 
-<div class="header__mobile">
+<header id="header__hamb">
+	<div class="container">
+		<nav class="nav">
+      <img src="./assets/images/features/menu.png" alt="menu" id="phone_menu">
+			<a class="header__logo" href="#home">
+        <span class="logo__text">singolo</span>
+      </a>
+    </nav>
+    <div class="nav__hamb">
+			<ul class="navigation">
+				<li><a class="home navigation__selected" href="#home">home</a></li>
+				<li><a class="info" href="#info">services</a></li>
+				<li><a class="portfolio" href="#portfolio">portfolio</a></li>
+				<li><a class="about" href="#about">about</a></li>
+				<li><a class="form__main" href="#form__main">contact</a></li>
+      </ul>
+	  <div>
+	</div>
+</header>
+
+<div id="header__mobile">
   <div class="container">
 		<nav class="nav">
-      <img src="./assets/images/features/menu.png" alt="menu" id="phone_menu" class="rotate">
+      <img src="./assets/images/features/menu.png" alt="menu" id="phone_menu_mobile" class="rotate">
       <a class="header__logo" href="#home">
-        <span id="logo__text">singolo</span>
+        <span class="logo__text">singolo</span>
       </a>
     </nav>
   </div>

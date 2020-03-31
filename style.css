@@ -29,15 +29,7 @@ body {
 }
 
 #header__hamb {
-	display: none;;
-	width: 210vw;
-	height: 100%;
-	background-color: #2d303a;
-	color: #fff;
-	border-bottom: 0;
-	padding: 12vw 0;
-	position: fixed;	
-	z-index: 99;
+	display: none;
 } 
 
 .hidden {
@@ -644,7 +636,6 @@ a {
 	transform: rotate(90deg);
 }
 
-
 @media (max-width: 375px) {	
 #header__mobile {
 	display: block;
@@ -655,7 +646,18 @@ a {
 	padding: 12vw 0;
 	position: sticky;
 	top: 0;
-	z-index: 0;
+	z-index: 99;
+}
+#header__hamb {
+	display: none;
+	width: 210vw;
+	height: 100%;
+	background-color: #2d303a;
+	color: #fff;
+	border-bottom: 0;
+	padding: 12vw 0;
+	position: fixed;	
+	z-index: 99;
 }
 .header {
 	display: none;

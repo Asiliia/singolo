@@ -490,6 +490,8 @@ textarea::placeholder {
 	color: #f48c8f;
 	font-weight: 300;
 	font-family: 'Lato', sans-serif;
+	padding-left: 10vw;
+	padding-top: 5vw;
 }
 
 textarea {
@@ -516,7 +518,6 @@ textarea {
 
 .btn:hover {
 	background-color: #a33731;
-	;
 }
 
 #description {
@@ -853,9 +854,11 @@ form textarea {
 	align-items: center;
 	margin-bottom: 10vw;
 	font-size: 9vw;
+	padding-left: 0;
 }
+
 .btn {
-	width: 100vw;
+	width: 100%;
 	border-radius: 5vw;
 	font-size: 9vw;
 }
@@ -879,19 +882,11 @@ form textarea {
 .footer__text {
 	display: none;
 }
-
+ #description {
+	padding: 0;
+ }
 }
 
 @media (max-width: 640px) {
-	.control>.arrow {
-		display: none;
-	}
 
-	.project-name {
-		display: none;
-	}
-
-	.description {
-		border: 0;
-	}
 }

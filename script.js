@@ -16,7 +16,7 @@ const V_PHONE = document.getElementById('vert__phone');
 const V_PHONE_LINK = "./assets/images/features/phone-vertical.png";
 const V_PHONE_LINK_BLACK = "./assets/images/features/phone-vertical-black.png";
 
-const SETTINGS = document.getElementById('settings');
+const SETTINGS = document.querySelectorAll('#settings > li');
 const PORTFOLIO_IMGS = document.getElementById('images__wrap');
 const INPUT = document.getElementById('inrut__wrap');
 const BUTTON = document.getElementById('form_submit');
@@ -49,12 +49,22 @@ HEADER__HUMB.addEventListener('click', (event) => {
 
 MENU.forEach(function(item) {
 	item.addEventListener('click', (event) => {
+		let sectionId = document.getElementById(event.target.classList[0].toString());
+
+		if(event.target.classList[0] === 'home' || event.target.classList[0] === 'header__mobile') {
+			if(window.scrollY > 0){
+				window.scrollBy(0, -(window.scrollY));
+			}
+		}
+		
+		else if(sectionId) { 
+		    let header = window.getComputedStyle(document.getElementById('home')).display === "none" ? document.getElementById('header__mobile') : document.getElementById('home');
+			window.scrollBy(0, sectionId.getBoundingClientRect().top - header.getBoundingClientRect().height);
+		}  
+		event.preventDefault();
 		MENU.forEach(m => m.querySelectorAll('a').forEach(el => el.classList.remove('navigation__selected')));
 		event.target.classList.add('navigation__selected');
-		let sectionId = document.getElementById(event.target.classList[0].toString());
-		if(sectionId) { 
-			window.scrollBy(0, sectionId.getBoundingClientRect().top-71);
-		}  
+		
 	});
 });
 
@@ -70,8 +80,9 @@ HEADER.forEach(function(item) {
 });
 
 window.addEventListener('scroll', () => {     
-    let index = SECTIONS.length;
-    while(--index && window.scrollY + 50 < SECTIONS[index].offsetTop) {}  
+	let index = SECTIONS.length;
+	let header = window.getComputedStyle(document.getElementById('home')).display === "none" ? document.getElementById('header__mobile') : document.getElementById('home');
+    while(--index && window.scrollY + header.getBoundingClientRect().height < SECTIONS[index].offsetTop) {}  
     MENU.forEach(m => m.querySelectorAll('a').forEach(el => el.classList.remove('navigation__selected')));
     MENU.forEach(m => m.querySelectorAll('a')[index].classList.add('navigation__selected'));
 });
@@ -86,13 +97,15 @@ PHONES.addEventListener('click', (event) => {
     }    
 });
 
-SETTINGS.addEventListener('click', (event) => {
-    SETTINGS.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+SETTINGS.forEach(function(item) 
+{   item.addEventListener('click', (event) => {
+    SETTINGS.forEach(el => el.classList.remove('active'));
     event.target.classList.add('active');
     let countChildren = PORTFOLIO_IMGS.childNodes, i;    
     for (i = countChildren.length; i >= 0; i--) {
         PORTFOLIO_IMGS.appendChild(countChildren[Math.random() * i | 0]);
-    }
+	}
+});
 });
 
 PORTFOLIO_IMGS.addEventListener('click', (event) => {

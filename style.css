@@ -205,7 +205,7 @@ figure.next {
 .info__text {
 	font-size: 18px;
 	font-weight: 300;
-	line-height: 30px;
+	line-height: 30px;	
 	margin-bottom: 0;
 	text-align: justify;
 }
@@ -221,13 +221,13 @@ figure.next {
 	-moz-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	-o-flex-wrap: wrap;
-	flex-wrap: wrap;
+	flex-wrap: column wrap;
 	padding: 0;
 	justify-content: space-between;
 }
 
 .info__item {
-	min-width: 300px;
+	width: 30%;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -724,6 +724,9 @@ a {
 	line-height: 25vw;
 	text-align: left;
 }
+.info__item {
+	width: 100%;
+}
 .info__item img {
 	min-width: 40vw;
 	min-height: 40vw;
@@ -887,6 +890,29 @@ form textarea {
  }
 }
 
-@media (max-width: 640px) {
-
+@media (min-width: 375px) and (max-width: 768px) {
+	.info__item {
+		width: 45%;
+	}
+	.info__title {
+		font-size: 5.5vw;
+	}
+ 	.info__text {
+		font-size: 3.3vw;
+		line-height: 5vw;
+	} 
+	.info__item img {
+		min-width: 11vw;
+		min-height: 11vw;
+		margin-right: 5vw;
+		margin-top: 5vw;
+	}
+	.list__item-title {
+		font-size: 3.3vw;
+	}
+	.list__item-text {
+		font-size: 2.1vw;
+		line-height: 5vw;
+		max-height: 30vw;
+	}
 }

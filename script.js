@@ -49,7 +49,7 @@ HEADER__HUMB.addEventListener('click', (event) => {
 
 MENU.forEach(function(item) {
 	item.addEventListener('click', (event) => {
-		let sectionId = document.getElementById(event.target.classList[0].toString());
+		let sectionId = document.getElementById(event.target.classList[0]);
 
 		if(event.target.classList[0] === 'home' || event.target.classList[0] === 'header__mobile') {
 			if(window.scrollY > 0){

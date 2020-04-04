@@ -82,7 +82,8 @@ HEADER.forEach(function(item) {
 window.addEventListener('scroll', () => {     
 	let index = SECTIONS.length;
 	let header = window.getComputedStyle(document.getElementById('home')).display === "none" ? document.getElementById('header__mobile') : document.getElementById('home');
-    while(--index && window.scrollY + header.getBoundingClientRect().height < SECTIONS[index].offsetTop) {}  
+	let temp =  Math.floor(header.getBoundingClientRect().height);
+	while(--index && window.scrollY < (SECTIONS[index].offsetTop - temp)) {}  
     MENU.forEach(m => m.querySelectorAll('a').forEach(el => el.classList.remove('navigation__selected')));
     MENU.forEach(m => m.querySelectorAll('a')[index].classList.add('navigation__selected'));
 });

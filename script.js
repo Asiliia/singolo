@@ -23,13 +23,11 @@ const BUTTON = document.getElementById('form_submit');
 
 HAMB.addEventListener('click', (event) => {
 	if (event.target.classList.contains('rotate')) {							
-		HEADER__HUMB.style.display = 'block';	
-		event.target.classList.remove('rotate'); 
-		event.preventDefault();
+		HEADER__HUMB.style.display = 'block';
+		headerLogo.style.display = 'none';
 	} else {				
 		HEADER__HUMB.style.display = 'none';
-		event.target.classList.add('rotate');	
-		event.preventDefault();
+		event.target.classList.add('rotate');
 	}
 });
 

@@ -647,7 +647,7 @@ a {
 	padding: 12vw 0;
 	position: sticky;
 	top: 0;
-	z-index: 99;
+	z-index: 98;
 }
 #header__hamb {
 	display: none;
@@ -710,7 +710,10 @@ a {
 .header__logo {
 	font-size: 13vw;
 	display: block;
-	margin-right: calc(100% - 100vw);
+	margin: auto calc(100% - 150vw) auto auto;
+}
+#header-hamb-logo {
+	margin: auto calc(100% - 100vw) auto auto;
 }
 .info__list {
 	flex-direction: column;
@@ -890,7 +893,7 @@ form textarea {
  }
 }
 
-@media (min-width: 375px) and (max-width: 768px) {
+@media (min-width: 376px) and (max-width: 768px) {
 	.info__item {
 		width: 45%;
 	}

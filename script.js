@@ -59,12 +59,11 @@ MENU.forEach(function(item) {
 		
 		else if(sectionId) { 
 		    let header = window.getComputedStyle(document.getElementById('home')).display === "none" ? document.getElementById('header__mobile') : document.getElementById('home');
-			window.scrollBy(0, sectionId.getBoundingClientRect().top - header.getBoundingClientRect().height);
-		}  
-		event.preventDefault();
+			window.scrollBy(0, sectionId.getBoundingClientRect().top - header.offsetHeight);
+		}  		
 		MENU.forEach(m => m.querySelectorAll('a').forEach(el => el.classList.remove('navigation__selected')));
 		event.target.classList.add('navigation__selected');
-		
+		event.preventDefault();
 	});
 });
 
@@ -82,7 +81,7 @@ HEADER.forEach(function(item) {
 window.addEventListener('scroll', () => {     
 	let index = SECTIONS.length;
 	let header = window.getComputedStyle(document.getElementById('home')).display === "none" ? document.getElementById('header__mobile') : document.getElementById('home');
-	let temp =  Math.floor(header.getBoundingClientRect().height);
+	let temp =  Math.floor(header.offsetHeight);
 	while(--index && window.scrollY < (SECTIONS[index].offsetTop - temp)) {}  
     MENU.forEach(m => m.querySelectorAll('a').forEach(el => el.classList.remove('navigation__selected')));
     MENU.forEach(m => m.querySelectorAll('a')[index].classList.add('navigation__selected'));

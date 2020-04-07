@@ -11,15 +11,16 @@
 </head>
 
 <body>
-<header id="home" class="header">
+<header class="header" id="home">
 	<div class="container">
 		<nav class="nav">
+     
 			<a class="header__logo" href="#home">
         <span class="logo__text">singolo</span>
       </a>
-			<ul id="navigation">
+			<ul class="navigation">
 				<li><a class="home navigation__selected" href="#home">home</a></li>
-				<li><a class="info navigation__item" href="#info">services</a></li>
+				<li><a class="info" href="#info">services</a></li>
 				<li><a class="portfolio" href="#portfolio">portfolio</a></li>
 				<li><a class="about" href="#about">about</a></li>
 				<li><a class="form__main" href="#form__main">contact</a></li>
@@ -27,16 +28,55 @@
 		</nav>
 	</div>
 </header>
-<section id="main">
+
+<header id="header__hamb">
 	<div class="container">
-		<div class="slides__wrap">
-			<div id="image__wrap">
-				<img src="./assets/images/features/phone-vertical.png" alt="phonevert" id="vert__phone" class="off">
-				<img src="./assets/images/features/phone-horizontal.png" alt="phonehor" id="hor__phone">
-			</div>
-			<a href="#"><img src="./assets/images/features/left.png" alt="left" class="slides__button-left"></a>
-			<a href="#"><img src="./assets/images/features/right.png" alt="right" class="slides__button-right"></a>
-		</div>
+		<nav class="nav">
+      <img src="./assets/images/features/menu.png" alt="menu" id="phone_menu">
+			<a class="header__logo" href="#home" id="header-hamb-logo">
+        <span class="logo__text">singolo</span>
+      </a>
+    </nav>
+    <div class="nav__hamb">
+			<ul class="navigation">
+				<li><a class="home navigation__selected" href="#header__hamb">home</a></li>
+				<li><a class="info" href="#info">services</a></li>
+				<li><a class="portfolio" href="#portfolio">portfolio</a></li>
+				<li><a class="about" href="#about">about</a></li>
+				<li><a class="form__main" href="#form__main">contact</a></li>
+      </ul>
+	  <div>
+	</div>
+</header>
+
+<div id="header__mobile">
+  <div class="container">
+		<nav class="nav">
+      <img src="./assets/images/features/menu.png" alt="menu" id="phone_menu_mobile" class="rotate">
+      <a class="header__logo" href="#home">
+        <span class="logo__text">singolo</span>
+      </a>
+    </nav>
+  </div>
+</div>
+
+<section id="main">
+	<div class="container_slider">
+
+		<div id="slides__wrap">
+			<figure class="slide slide__one active" id='slide__one js'>
+				<img src="./assets/images/features/phone-vertical.png" alt="phonevert" class="vertical">
+				<img src="./assets/images/features/phone-horizontal.png" alt="phonehor" class="horizontal">
+      </figure>
+      <figure class="slide slide__two">
+				<img src="./assets/images/features/phone-side.png" alt="phone-side" class="phone">
+        <img src="./assets/images/features/phone-vertical.png" alt="phone-center" class="phone">
+				<img src="./assets/images/features/phone-side.png" alt="phone-side" class="phone">
+			</figure>
+			<a href="#"><img src="./assets/images/features/left.png" alt="left" id="slides__button-left"></a>
+			<a href="#"><img src="./assets/images/features/right.png" alt="right" id="slides__button-right"></a>
+    </div>
+
 	</div>
 </section>
 <section id="info">
@@ -69,14 +109,14 @@
 				<img src="./assets/images/features/4.png" alt="feat4">
 				<div class="list__item-wrap">
 					<h3 class="list__item-title">Responsive Layout</h3>
-					<p class="list__item-text">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Prae- sent elitleo</p>
+					<p class="list__item-text">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elitleo</p>
 				</div>
 			</li>
 			<li class="info__item">
 				<img src="./assets/images/features/5.png" alt="feat5">
 				<div class="list__item-wrap">
 					<h3 class="list__item-title">24 / 7 Support</h3>
-					<p class="list__item-text">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellen- tesque egestas venenatis lorem</p>
+					<p class="list__item-text">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellen tesque egestas venenatis lorem</p>
 				</div>
 			</li>
 			<li class="info__item">
@@ -88,7 +128,7 @@
 			</li>
 		</ul>
 	</div>
-</section>
+</sectionsection>
 <section id="portfolio">
     <div class="container">
       <h2 class="portfolio__title">Portfolio</h2>
@@ -100,18 +140,18 @@
         <li>Artwork</li>
       </ul>
       <div id="images__wrap">
-        <img src="./assets/images/portfolio/1.png" alt="img">
-        <img src="./assets/images/portfolio/2.png" alt="img">
-        <img src="./assets/images/portfolio/3.png" alt="img">
-        <img src="./assets/images/portfolio/4.png" alt="img">
-        <img src="./assets/images/portfolio/5.png" alt="img">
-        <img src="./assets/images/portfolio/6.png" alt="img">
-        <img src="./assets/images/portfolio/7.png" alt="img">
-        <img src="./assets/images/portfolio/8.png" alt="img">
-        <img src="./assets/images/portfolio/9.png" alt="img">
-        <img src="./assets/images/portfolio/10.png" alt="img">
-        <img src="./assets/images/portfolio/11.png" alt="img">
-        <img src="./assets/images/portfolio/12.png" alt="img">
+        <img src="./assets/images/portfolio/1.png" alt="img1">
+        <img src="./assets/images/portfolio/2.png" alt="img2">
+        <img src="./assets/images/portfolio/3.png" alt="img3">
+        <img src="./assets/images/portfolio/4.png" alt="img4">
+        <img src="./assets/images/portfolio/5.png" alt="img5">
+        <img src="./assets/images/portfolio/6.png" alt="img6">
+        <img src="./assets/images/portfolio/7.png" alt="img7">
+        <img src="./assets/images/portfolio/8.png" alt="img8">
+        <img src="./assets/images/portfolio/9.png" alt="img9">
+        <img src="./assets/images/portfolio/10.png" alt="img10">
+        <img src="./assets/images/portfolio/11.png" alt="img11">
+        <img src="./assets/images/portfolio/12.png" alt="img12">
       </div>
     </div>
   </section>
@@ -162,27 +202,27 @@
         <div class="form__title">Get a Quote</div>
         <p class="form__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor nauris cindimentum nibh.</p>
         <div class="form__wrap">
-          <div class="inrut__wrap">
-            <input type="text" required placeholder="Name (Required)" pattern="^[a-zA-Z\s]+$">
-            <input type="email" required placeholder="Email (Required)">
-            <input type="text" placeholder="Subject">
-            <input class="input_message" type="text" placeholder="Describe your project in detail...">
-            <input type="submit" value="Отправить" class="form_submit">
+          <div id="inrut__wrap">
+            <input type="text" required placeholder="Name (required)" pattern="^[a-zA-Z\s]+$" id="name" class="filled" maxlength=20>
+            <input type="email" required placeholder="Email (required)" id="email" class="filled" maxlength=20>
+            <input type="text" placeholder="Subject" id="subject" class="filled" maxlength=20>
+            <textarea form="form__main" placeholder="Describe your project in detail..." class="filled" id="description" maxlength=400></textarea>
+            <input type="submit" value="send" id="form_submit" class="btn">
           </div>          
           <div class="contact__info">
             <h2 class="contact__info_title">Contact Information</h2>
             <p class="contact__info_text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nib. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
             <div class="contacts__holder">
               <div class="contacts__wrap">
-                <img src="./assets/images/form/1.png" alt="form1">
+                <img src="./assets/images/form/ico-location.svg" alt="form1">
                 <p class="contacts__text">Elm St. 14/05 Lost City</p>
               </div>
               <div class="contacts__wrap">
-                <img src="./assets/images/form/2.png" alt="form2">
+                <img src="./assets/images/form/ico-phone.svg" alt="form2">
                 <a class="contacts__text" href="tel:035283318635">03528 331 86 35</a>
               </div>
               <div class="contacts__wrap">
-                <img src="./assets/images/form/3.png" alt="form3">
+                <img src="./assets/images/form/ico-mail.svg" alt="form3">
                 <a class="contacts__text" href="mailto:info@singolo.com">info@singolo.com</a>
               </div>
             </div>            
@@ -190,8 +230,7 @@
         </div>
       </form>
     </div>
-</section>
-  
+</section>  
 <footer class="footer">
     <div class="container">
       <div class="footer__content">
@@ -205,6 +244,16 @@
       </div>
     </div>
 </footer>
+<div id="message-block" class="hidden">
+  <div id="message">
+      <br><b>The letter was sent</b>
+      <br><span>Subject: </span><span id="msg_subject"></span>
+      <br><span>Description: </span><span id="msg_description"></span>
+      <div>
+      <button id="close-btn" class="btn">OK</button>
+      </div>
+  </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
